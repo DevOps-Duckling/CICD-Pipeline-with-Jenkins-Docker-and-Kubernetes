@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend   # Ensure this path is correct
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend/src/public  # Ensure this path is correct
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+
+  db:
+    build: ./db
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb

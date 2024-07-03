@@ -1,0 +1,12 @@
+multi-container-app/
+├── backend/
+│   ├── app.py
+│   ├── requirements.txt
+│   └── Dockerfile
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── Dockerfile
+├── db/
+│   └── Dockerfile
+└── docker-compose.yml
